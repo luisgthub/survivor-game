@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://drnihs6gb875y"]
+
+[ext_resource type="Script" uid="uid://c750i4soooa8q" path="res://virus_hunter.gd" id="1_lfc27"]
+[ext_resource type="Texture2D" uid="uid://cfdopgtu70r1k" path="res://assets/anti.png" id="2_bqr8p"]
+
+[node name="virus_hunter" type="CharacterBody2D" unique_id=1311544257]
+script = ExtResource("1_lfc27")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1576142957]
+modulate = Color(1, 0.38039216, 1, 1)
+texture = ExtResource("2_bqr8p")
