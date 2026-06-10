@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://7be57jfbcg6h"]
+
+[ext_resource type="Texture2D" uid="uid://c16f6g0qo8oms" path="res://assets/foldericon.png" id="1_mft3y"]
+[ext_resource type="Script" uid="uid://c0utonrb67m0a" path="res://folder.gd" id="2_swcps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mft3y"]
+size = Vector2(13, 12)
+
+[sub_resource type="LabelSettings" id="LabelSettings_swcps"]
+font_size = 4
+
+[node name="folder" type="Area2D" unique_id=1805366820 groups=["folder"]]
+position = Vector2(17, 15)
+scale = Vector2(2, 2)
+script = ExtResource("2_swcps")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1484589664]
+visible = false
+position = Vector2(0, 15)
+scale = Vector2(6, 3)
+lifetime = 0.7
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2(0, 20)
+scale_amount_max = 3.0
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=905896345]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_mft3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1059440744]
+position = Vector2(-1.75, -1.75)
+scale = Vector2(0.84375, 0.96875)
+texture = ExtResource("1_mft3y")
+
+[node name="Label" type="Label" parent="." unique_id=1614139249]
+offset_left = -7.5
+offset_top = 7.0
+offset_right = 7.5
+offset_bottom = 14.0
+text = "folder1"
+label_settings = SubResource("LabelSettings_swcps")
+
+[node name="Button" type="Button" parent="." unique_id=1665764962]
+visible = false
+offset_left = -8.5
+offset_top = -6.5
+offset_right = 8.0
+offset_bottom = 6.5
+
+[connection signal="pressed" from="Button" to="." method="on_button_pressed"]

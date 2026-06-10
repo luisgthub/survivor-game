@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dxwp53gad2ub8"]
+
+[ext_resource type="PackedScene" uid="uid://crg2pio2xespa" path="res://screen.tscn" id="1_fopwh"]
+[ext_resource type="Texture2D" uid="uid://dr5ad1tkueb7s" path="res://assets/trash.png" id="2_qhhne"]
+[ext_resource type="Texture2D" uid="uid://cj1ccodkooulv" path="res://assets/mailicon.png" id="3_j1r8h"]
+[ext_resource type="Texture2D" uid="uid://ccd1hpotug564" path="res://assets/menu.png" id="4_b3lal"]
+[ext_resource type="PackedScene" uid="uid://waoggrrublg8" path="res://virus.tscn" id="5_pjerj"]
+[ext_resource type="PackedScene" uid="uid://7be57jfbcg6h" path="res://folder.tscn" id="6_p1ai6"]
+
+[node name="Main" type="Node2D" unique_id=1533087129]
+
+[node name="screen" parent="." unique_id=1087472031 instance=ExtResource("1_fopwh")]
+
+[node name="trash" type="Sprite2D" parent="." unique_id=1693217304]
+position = Vector2(-362, -107)
+scale = Vector2(2, 2)
+texture = ExtResource("2_qhhne")
+
+[node name="trash3" type="Sprite2D" parent="." unique_id=1852743735]
+position = Vector2(-360, -207)
+scale = Vector2(2, 2)
+texture = ExtResource("3_j1r8h")
+
+[node name="trash4" type="Sprite2D" parent="." unique_id=1915576179]
+position = Vector2(-413, 143)
+scale = Vector2(2, 2)
+texture = ExtResource("4_b3lal")
+
+[node name="virus" parent="." unique_id=708258554 instance=ExtResource("5_pjerj")]
+
+[node name="folder" parent="." unique_id=842568321 instance=ExtResource("6_p1ai6")]
+position = Vector2(-154, -100)

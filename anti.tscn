@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ceaqqjso5jif"]
+
+[ext_resource type="Texture2D" uid="uid://cfdopgtu70r1k" path="res://assets/anti.png" id="1_yugo6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yugo6"]
+size = Vector2(16, 16)
+
+[node name="anti" type="PathFollow2D" unique_id=467140534]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=617331180]
+texture = ExtResource("1_yugo6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1026700590]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=301442352]
+shape = SubResource("RectangleShape2D_yugo6")
